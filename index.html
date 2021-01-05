@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jQuery Tab</title>
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</head>
+
+<body>
+    <div class="heading">jQuery Tab</div>
+    <div class="container">
+        <ul>
+            <li class="item" data-tab="tab1">Home</li>
+            <li class="item active" data-tab="tab2">About</li>
+            <li class="item" data-tab="tab3">Services</li>
+            <li class="item" data-tab="tab4">Contact</li>
+        </ul>
+        <div class="tab_container">
+            <div id="tab1" class="tab_item wow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas reiciendis veniam ut,
+                ratione quis rerum optio veritatis voluptatem minus repudiandae quod vero quia velit dicta nemo beatae
+                at nisi! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi odit, temporibus labore
+                maiores eligendi in repellat repellendus corrupti aliquid! Obcaecati libero nulla repellat velit
+                inventore, aperiam ipsa deserunt quae incidunt!
+            </div>
+            <div id="tab2" class="tab_item wow active">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas reiciendis veniam ut,
+                ratione quis rerum optio veritatis voluptatem minus repudiandae quod vero quia velit dicta nemo beatae
+                at nisi! ratione quis rerum optio veritatis voluptatem minus repudiandae quod vero quia velit dicta nemo
+                beatae
+                at nisi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus iure,
+            </div>
+            <div id="tab3" class="tab_item wow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas reiciendis veniam ut,
+                ratione quis rerum optio veritatis voluptatem minus repudiandae quod vero quia velit dicta nemo beatae
+                at nisi!
+            </div>
+            <div id="tab4" class="tab_item wow">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit quas reiciendis veniam ut,
+                ratione quis rerum optio veritatis voluptatem minus repudiandae quod vero quia velit dicta nemo beatae
+                at nisi! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus iure, beatae maiores
+                officia maxime nam a voluptatibus ab! Aut quis non ducimus cupiditate dolores consequuntur blanditiis
+                perspiciatis. Quaerat, consectetur adipisci.
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $(document).ready(function () {
+            $(".item").click(function () {
+                $(".item").removeClass("active");
+                $(".tab_item").removeClass("active bounceInRight");
+                $(this).addClass("active");
+                let tab_ = $(this).attr("data-tab");
+                $("#" + tab_).addClass("active bounceInRight");
+
+            })
+        })
+
+    </script>
+</body>
+
+</html>
